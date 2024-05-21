@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  font-family: 'Lilita One', sans-serif;
+  flex-direction: column;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+  transition: .5s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+
+}
+
+header {
+  width: 100%;
+  height: 30%;
+  position: relative;
+  text-align: center;
+
+}
+
+header .imagem-fundo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+
+}
+
+header .titulo {
+  cursor: pointer;
+  font: 400 35px 'Lilita One', sans-serif;
+  position: relative;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.788);
+  color: #fff500;
+  z-index: 1;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+main {
+  scroll-snap-align: start;
+  display: flex;
+  width: 100%;
+  height: 500px;
+
+}
+
+.conteudo {
+
+  width: 20%;
+  cursor: pointer;
+  overflow: hidden;
+
+}
+
+.conteudo:hover {
+  width: 80%;
+  transition: .5s;
+
+}
+
+.conteudo .estado {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  text-align: center;
+  filter: brightness(.6);
+
+}
+
+.conteudo:hover .estado {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: .2s ease-in-out;
+  filter: brightness(1);
+  transform: scale(1.2);
+}
+
+.conteudo .campo {
+
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  margin-top: -500px;
+  display: flex;
+
+}
+
+.conteudo:hover .campo {
+  width: 80%;
+}
+
+
+.conteudo .campo .info h1 {
+
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+
+}
+
+.conteudo:hover .campo .info h1 {
+  width: 80%;
+  transform: translateX(4%);
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  transition: .9s;
+
+}
+
+.conteudo .campo .info p {
+  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.788);
+  color: aliceblue;
+  opacity: 0;
+
+
+}
+
+.conteudo:hover .campo .info p {
+  transform: translateY(50%);
+  transform: translateX(4%);
+  letter-spacing: 0.2px;
+  width: 39%;
+  margin: 10px 0;
+  transition: 0.9s ease-in;
+  opacity: 1;
+  text-align: justify;
+}
+
+.intro {
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+
+}
+
+.regiao {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 1%;
+  right: 2%;
+  flex-direction: column;
+  color: aliceblue;
+  z-index: 1;
+  font: 30px 'Lilita One', sans-serif;
+}
+
+.regiao img {
+  margin-bottom: 1px;
+  z-index: 1;
+  filter: brightness(100);
+  width: 50%;
+
+}
+
+.text,
+.text1,
+.text2 {
+  text-align: justify;
+  width: 100%;
+  height: 100vh;
+}
+
+.text p {
+
+
+  width: 80%;
+  height: 100vh;
+  font: 30px 'Lilita One', sans-serif;
+  color: aliceblue;
+  position: absolute;
+  left: 10%;
+  bottom: 50%;
+}
+
+.text1 p {
+  width: 80%;
+  height: 100vh;
+  font: 30px 'Lilita One', sans-serif;
+  color: aliceblue;
+  position: absolute;
+  left: 10%;
+  bottom: 25%;
+}
+
+.text2 p {
+  width: 80%;
+  font: 30px 'Lilita One', sans-serif;
+  color: aliceblue;
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+}
+
+.background-image {
+  filter: brightness(.5);
+  width: 100%;
+  
+  background-size: cover;
+  background-position: center;
+}
+
+::-webkit-scrollbar {
+  position: absolute;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#5DF445, #fff500, #4574f4);
+  border-radius: 20px;
+}

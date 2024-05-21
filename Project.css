@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100vh;
+  background-color: black;
+  display: flex;
+  overflow: hidden;
+
+}
+
+.imagem-fundo {
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.conteudo {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+
+  flex-direction: column;
+  width: auto;
+  height: 100%;
+  gap: 20px;
+  padding: 0 44px;
+}
+
+header {
+
+  width: 100%;
+  height: 165px;
+  display: flex;
+  position: hidden;
+  align-items: center;
+}
+
+.logo {
+  display: inline;
+  position: relative;
+}
+
+header .logo img {
+  width: 35%;
+}
+
+
+.titulo {
+  width: 100%;
+  display: flex;
+  position: relative;
+  cursor: default;
+}
+
+.titulo .letra-pais {
+  margin: 2px;
+  font: 400 120px 'Lilita One', sans-serif;
+}
+
+.regioes button {
+  top: 145px;
+  left: 5%;
+}
+
+button {
+  margin: 15px;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font: 400 20px 'Lilita One', sans-serif;
+  line-height: normal;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+
+}
+.regioes button:hover{
+  border: 10px #c44949;
+}
+
+
+
+.setas {
+  position: absolute;
+  bottom: 5%;
+  right: 30%;
+  display: flex;
+  z-index: 101;
+  /* Ajuste o z-index para garantir que as setas fiquem sobre os slides */
+
+}
+
+.setas button#depois button#antes {
+  pointer-events: none;
+  border-radius: 50%;
+  background-color: rgba(12, 10, 10, 0.347);
+  border: none;
+  color: #fffafa7b;
+  font-family: monospace;
+  font-weight: bold;
+  z-index: 102;
+  cursor: pointer;
+  /* Ajuste o z-index para garantir que as setas fiquem sobre os slides */
+
+}
+
+.setas button#depois:hover button#antes:hover {
+  background-color: #0000006e;
+  color: #000;
+}
+
+
+
+.slides {
+  position: absolute;
+  top: 5px;
+  right: 1px;
+  bottom: 5px;
+  width: 35%;
+  height: 95%;
+  z-index: 100;
+  margin: 10px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.slides .item {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.5s ease;
+
+}
+
+
+.slides .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+
+}
+
+.slides .item .estado {
+  position: relative;
+  top: -30%;
+  text-align: center;
+  color: aliceblue;
+  box-sizing: border-box;
+  padding: 23px;
+  font: 400 25px 'Lilita One', sans-serif;
+}
+
+.slides.depois .item .estado,
+.slides.antes .item .estado
+{
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: mostrartexto .5s .3s linear 1 forwards;
+}
+
+
+
+@keyframes mostrartexto {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.slides.antes .item {
+  transform: translateX(-100%);
+}
+
+/*
+.slides.depois .item:nth-last-child(1) {
+  overflow: hidden;
+  animation: mostrarSlide .5s linear 1 forwards;
+}
+
+
+@keyframes mostrarSlide {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+}
+*/
+.slides.depois .item img {
+  animation: effectNext .5s linear 1 forwards;
+
+}
+
+@keyframes effectNext {
+  to {
+    transform: translateX(-100%);
+  }
+}

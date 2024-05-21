@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  font-family:'Lilita One', sans-serif;
+  overflow-X: hidden;
+  background: #000;
+}
+header{
+    position: absolute;
+    height: 100%;
+    width: 40%;
+}
+header .titulo{
+    position: absolute;
+    z-index: 1;
+    margin-top: 24%;
+    text-align: center;
+    padding: 30px;
+    place-items: center;
+    box-sizing: border-box;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+
+header .titulo h1{
+    align-items: center;
+    font-size: 150px;
+    color: #a52a2a;
+    cursor: pointer;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.788);
+
+}
+
+main{
+   display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+.conteudo{
+    overflow: hidden;
+    height: 33.3%;
+    cursor: pointer;
+}
+.conteudo:hover{
+    height: 50%;
+    transition: .5s ease-in-out;
+}
+.conteudo .imagem{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    text-align: center;
+   
+
+}
+.conteudo:hover .imagem{
+    transition: .3s ease-in-out;
+    transform: scale(1.2);
+}
+
+.conteudo .campo{
+    transform: translateY(-100%);
+    height: 100%;
+    text-align: right;
+    position: relative; 
+}
+.conteudo:hover .campo{
+    transform: translateY(-120%);
+    transition: .3s ease-in-out;
+}
+.conteudo .campo .info {
+    transform: translateX(220%);
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.conteudo:hover .campo .info {
+    transform: translateX(220%);
+}
+.conteudo .campo .info h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.788);
+
+    color: #9e2626;
+    padding: 30px;
+    margin-top: 13%;
+}
+.conteudo .campo .info p{
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.788);
+    color: #e7e7e7;
+    filter: blur(5px);
+    opacity: 0;
+}
+.conteudo:hover .campo .info p{
+    opacity: 1;
+    filter: blur(0px);
+    transition: 1s;
+    transform: translateX(-8%);
+}
+
+
+.intro {
+    scroll-snap-align: start;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+  
+  }
+  
+  .regiao {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 1%;
+    right: 2%;
+    flex-direction: column;
+    color: aliceblue;
+    z-index: 1;
+    font: 30px 'Lilita One', sans-serif;
+  }
+  
+  .regiao img {
+    margin-bottom: 1px;
+    z-index: 1;
+    filter: brightness(100);
+    width: 30%;
+  
+  }
+  
+  .text{
+   
+    text-align: justify;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .text p {
+
+    width: 80%;
+    font: 30px 'Lilita One', sans-serif;
+    color: aliceblue;
+    position: absolute;
+    left: 10%;
+    bottom: -10%;
+  }
+  
+  .background-image {
+    filter: brightness(.5);
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+  }
+  
+  ::-webkit-scrollbar {
+    position: absolute;
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#5DF445, #fff500, #4574f4);
+    border-radius: 20px;
+  }
